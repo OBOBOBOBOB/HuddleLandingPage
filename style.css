@@ -72,7 +72,7 @@ main {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     main {
         background-image: url('./images/bg-mobile.svg');
     }
