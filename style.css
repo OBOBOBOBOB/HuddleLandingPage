@@ -1,0 +1,192 @@
+:root {
+    --violet: #674baf;
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+.attribution {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    color: hsl(0, 100%, 100%);
+    bottom: 2rem;
+    padding-block-end: 1rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url('./images/bg-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violet);
+    padding-block-start: 5rem;
+    padding-inline: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: grid;
+    gap: 0rem;
+    max-width: 72rem;
+}
+
+.main-body {
+    display: grid;
+    gap: 4rem;
+    place-items: center;
+}
+
+/* .mid-section {
+    display: flex;
+    gap: 5rem;
+} */
+
+.mid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* .left-component img{
+    height: 90%;
+    width: auto;
+} */
+
+.top-section {
+    justify-self: left;
+}
+
+@media screen and (max-width: 1080px) {
+    .left-component img{
+        height: 85%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        background-image: url('./images/bg-mobile.svg');
+    }
+    
+    .mid-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-component {
+        display: grid;
+        place-items: center;
+    }
+    .left-component img{
+        height: auto;
+        width: 90%;
+    }
+
+    .right-component {
+        display: grid;
+        place-items: center;
+        gap: 1rem;
+    }
+
+    .body {
+        text-align: center;
+        display: grid;
+        gap: 5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .btn-1 {
+        width: 22rem;
+    }
+
+    .main-body {
+        padding-block-end: 4rem;
+        gap: 3rem;
+    }
+
+    .buttom-section {
+        padding-block-end: 3rem;
+    }
+
+    #buttom-section {
+        justify-content: center;
+    }
+}
+
+.body {
+    display: grid;
+    gap: 1rem;
+    padding-block-start: 3rem;
+    padding-block-end: 1rem;
+    max-width: 36rem;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(0, 100%, 100%);
+    font-weight: 600;
+}
+
+.body p {
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(0, 100%, 100%);
+    line-height: 1.4rem;
+    opacity: 0.8;
+}
+
+.buttom-section img {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+button {
+    padding: 0.75rem;
+    border-radius: 50px;
+    width: 9rem;
+    padding-inline: 3rem;
+    color: var(--violet);
+    font-family: inherit;
+    font-weight: 400;
+}
+
+button:hover {
+    background: var(--soft-magenta);
+    color: hsl(0, 100%, 100%);
+    border: 1px solid var(--soft-magenta);
+    transform: translateY(-0.25rem);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(0);
+}
+.buttom-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    /* padding-inline-end: 2rem; */
+}
+
+.buttom-section img:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.buttom-section img:active {
+    transform: scale(1);
+}
